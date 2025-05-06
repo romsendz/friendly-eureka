@@ -1,103 +1,140 @@
-import Image from "next/image";
+import HeroImagePreview from "@/components/hero-image-preview";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import WhatsAppLink from "@/components/whatsapp-link";
+import { BENEFITS } from "@/lib/BENEFITS";
+import { SERVICES } from "@/lib/SERVICES";
+import { ArrowRight, MailIcon, PhoneCallIcon } from "lucide-react";
+import { Metadata } from "next";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm/6 sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="rounded bg-black/[.05] px-1 py-0.5 font-[family-name:var(--font-geist-mono)] font-semibold dark:bg-white/[.06]">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <HeroImagePreview />
+      <Separator className="mt-0 lg:hidden" />
+      <section className="lg:hidden">
+        <div className="container mx-auto px-4 py-8">
+          <h2 className="mb-6 text-4xl">
+            La Comodidad Empieza{" "}
+            <span className="text-brand bg-secondary rounded-sm whitespace-nowrap italic">
+              &nbsp; Aquí! &nbsp;
+            </span>
+          </h2>
+          <br />
+          <p className="px-8">
+            Soluciones Confiables de Climatización, Calefacción y Gas para Cada
+            Hogar. <br /> <br /> Desde aire acondicionado hasta suelo radiante,
+            nuestro equipo de expertos ofrece soluciones personalizadas para que
+            tu espacio sea siempre cómodo y eficiente.
+            <br /> <br /> Nos especializamos en sistemas modernos de
+            climatización, instalaciones de gas y calefacción, brindando
+            seguridad, calidad y un rendimiento duradero en el que puedes
+            confiar.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      <Separator className="my-4 lg:mt-0" />
+      <section>
+        <div className="container mx-auto px-4 py-8 text-center lg:px-24 xl:px-64">
+          <h2 className="mb-6 text-4xl">
+            Por Qué <span className="text-brand italic">Nos Eligen</span>
+          </h2>
+          <br />
+          <div className="grid grid-cols-[repeat(2,_1fr)] grid-rows-[repeat(3,_1fr)] gap-x-16 gap-y-8">
+            {BENEFITS.map((benefit, i) => (
+              <div key={i} className="flex flex-col items-center gap-2">
+                {benefit.icon}
+                <p>{benefit.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Separator className="my-4" />
+      <section>
+        <div className="container mx-auto px-4 py-8 md:px-12 lg:px-36 xl:px-68">
+          <h2 className="mb-6 text-center text-4xl">
+            Nuestros <span className="text-brand italic">servicios</span>
+          </h2>
+          <br />
+          <div className="grid grid-cols-[repeat(2,_1fr)] grid-rows-[repeat(2,_1fr)] gap-4 md:gap-8">
+            {SERVICES.map((service) => (
+              <Card
+                className="border-brand h-full justify-between transition-transform hover:scale-105"
+                key={service.header}
+              >
+                <CardHeader>
+                  <CardTitle className="md:text-2xl">
+                    {service.header}
+                  </CardTitle>
+                  <CardDescription className="md:text-md">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="flex flex-col gap-1">
+                    {service.subs.map((sub) => (
+                      <li key={sub} className="md:text-md text-sm">
+                        {sub}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild className="w-full">
+                    <Link href={service.link}>
+                      más <ArrowRight />
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Separator className="my-4" />
+      <section>
+        <div className="container mx-auto px-4 py-8">
+          <h2 className="mb-6 text-center text-4xl">Contáctanos</h2>
+          <br />
+          <p className="text-center">
+            Valoramos a cada cliente y nos enorgullece construir relaciones
+            duraderas a lo largo de nuestras colaboraciones.
+          </p>
+          <br />
+          <div className="flex flex-col items-center gap-3">
+            <Link
+              href={"tel:+34000000000"}
+              className="inline-flex items-center gap-2 text-purple-900 hover:underline"
+            >
+              <PhoneCallIcon className="text-lime-500" />
+              +34 000 000 000
+            </Link>
+            <Link
+              href={"mailto:ejemplo@ejemplo.com"}
+              className="inline-flex gap-2 text-purple-900 hover:underline"
+            >
+              <MailIcon className="text-lime-500" />
+              ejemplo@ejemplo.com
+            </Link>
+            <WhatsAppLink />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Inicio | Empresa",
+  description: "Empresa Empresa Empresa",
+};
