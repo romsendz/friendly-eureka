@@ -10,7 +10,7 @@ const Footer = () => {
       className="bg-primary flex w-full flex-col items-center gap-8 bg-cover bg-no-repeat px-4 py-6 shadow-2xl lg:gap-2"
       style={{ backgroundImage: "url('/footer-background.png')" }}
     >
-      <div className="text-primary-foreground container space-y-8 lg:flex lg:w-full lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
+      <div className="text-primary-foreground container space-y-8 lg:grid lg:w-full lg:grid-cols-[repeat(3,_1fr)] lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
         <div className="flex flex-col items-center gap-2">
           <Logo />
           <span>{`© ${date.getFullYear()} Nombre de empresa`}</span>
@@ -66,12 +66,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <ul className="flex gap-8 text-gray-400">
+      <ul className="grid grid-cols-[repeat(5,_1fr)] items-center justify-items-center text-sm text-gray-400">
         <li className="my-2 text-center">
           <Link href={"/legal"} className="inline-flex gap-2 hover:underline">
             Aviso Legal
           </Link>
         </li>
+        <li>|</li>
         <li className="my-2 text-center">
           <Link
             href={"/privacy-policy"}
@@ -80,6 +81,7 @@ const Footer = () => {
             Política de privacidad
           </Link>
         </li>
+        <li>|</li>
         <li className="my-2 text-center">
           <Link
             href={"/cookies-policy"}
@@ -89,7 +91,7 @@ const Footer = () => {
           </Link>
         </li>
       </ul>
-      <span className="text-sm text-gray-400 italic">
+      {/* <span className="text-xs text-gray-400 italic">
         Diseñado y desarrollado por{" "}
         <Link
           href={"https://portfolio-romsendz.vercel.app/"}
@@ -99,7 +101,7 @@ const Footer = () => {
         >
           Roman Sendziuk
         </Link>
-      </span>
+      </span> */}
     </footer>
   );
 };
