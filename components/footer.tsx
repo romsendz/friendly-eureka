@@ -6,14 +6,11 @@ import Link from "next/link";
 const Footer = () => {
   const date = new Date();
   return (
-    <footer
-      className="bg-primary flex w-full flex-col items-center gap-8 bg-cover bg-no-repeat px-4 py-6 shadow-2xl lg:gap-2"
-      style={{ backgroundImage: "url('/footer-background.png')" }}
-    >
-      <div className="text-primary-foreground container space-y-8 lg:grid lg:w-full lg:grid-cols-[repeat(3,_1fr)] lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
+    <footer className="bg-primary relative flex w-full flex-col items-center gap-8 bg-no-repeat px-4 py-6 shadow-2xl before:absolute before:top-[0] before:left-[0] before:z-0 before:h-full before:w-full before:bg-[url(/footer-background.png)] before:blur-[5px] before:filter before:content-[''] lg:gap-2">
+      <div className="text-primary-foreground z-1 container space-y-8 lg:grid lg:w-full lg:grid-cols-[repeat(3,_1fr)] lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
         <div className="flex flex-col items-center gap-2">
           <Logo />
-          <span>{`© ${date.getFullYear()} Nombre de empresa`}</span>
+          <span>{`© ${date.getFullYear()} Santecnica Iberica 2021 SL`}</span>
         </div>
         <ul>
           {MENU_ITEMS.map((menuItem) => (
@@ -57,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <ul className="grid grid-cols-[repeat(5,_1fr)] items-center justify-items-center text-sm text-gray-400">
+      <ul className="z-1 grid grid-cols-[repeat(5,_1fr)] items-center justify-items-center text-sm text-gray-400">
         <li className="my-2 text-center">
           <Link href={"/legal"} className="inline-flex gap-2 hover:underline">
             Aviso Legal
@@ -82,17 +79,17 @@ const Footer = () => {
           </Link>
         </li>
       </ul>
-      {/* <span className="text-xs text-gray-400 italic">
+      <span className="right-2 bottom-2 z-1 text-xs text-gray-400 italic lg:absolute">
         Diseñado y desarrollado por{" "}
         <Link
           href={"https://portfolio-romsendz.vercel.app/"}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex gap-2 hover:text-blue-500 hover:underline"
+          className="inline-flex gap-2 underline hover:text-blue-500"
         >
           Roman Sendziuk
         </Link>
-      </span> */}
+      </span>
     </footer>
   );
 };
