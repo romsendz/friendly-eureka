@@ -37,6 +37,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-brand: var(--brand);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -45,20 +46,21 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
+  --background: rgb(241, 239, 236);
+  --foreground: rgb(3, 3, 3);
+  --card: rgb(241, 239, 236);
+  --card-foreground: rgb(3, 3, 3);
+  --popover: rgb(241, 239, 236);
+  --popover-foreground: rgb(3, 3, 3);
+  --primary: rgb(18, 52, 88);
+  --primary-foreground: rgb(212, 201, 190);
+  --secondary: rgb(212, 201, 190);
+  --secondary-foreground: rgb(18, 52, 88);
+  --muted: rgb(212, 201, 190);
   --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --accent: rgb(212, 201, 190);
+  --brand: rgb(18, 52, 88);
+  --accent-foreground: rgb(18, 52, 88);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
@@ -68,16 +70,17 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar: rgb(212, 201, 190);
+  --sidebar-foreground: rgb(3, 3, 3);
+  --sidebar-primary: rgb(18, 52, 88);
+  --sidebar-primary-foreground: rgb(212, 201, 190);
+  --sidebar-accent: rgb(212, 201, 190);
+  --sidebar-accent-foreground: rgb(18, 52, 88);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
+/* not in use, but keep for future implementation on demand */
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
