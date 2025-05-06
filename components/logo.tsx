@@ -1,18 +1,36 @@
 import { clsx } from "clsx";
-import { StarsIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
-const Logo = ({ className }: { className?: string }) => {
+const Logo = ({
+  className,
+  maxWidth = 216,
+}: {
+  className?: string;
+  maxWidth?: number;
+}) => {
+  const aspectRatio = 3;
   return (
     <Link
       href={"/"}
       className={clsx(
-        "text-primary-foreground flex items-center gap-2 text-2xl leading-tight font-bold hover:text-white lg:text-3xl",
+        "relative inline-block leading-tight hover:text-white",
         className,
       )}
+      style={{
+        maxWidth: `${maxWidth}px`,
+        aspectRatio: aspectRatio,
+        width: "100%",
+      }}
     >
-      <StarsIcon />
-      Empresa
+      <Image
+        priority
+        src={"/logo.png"}
+        quality={80}
+        fill
+        alt={"Logo"}
+        className="object-contain"
+      />
     </Link>
   );
 };

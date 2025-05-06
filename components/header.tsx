@@ -76,10 +76,10 @@ export default function Header() {
 
   return (
     <header className="bg-primary fixed z-50 w-full shadow-md">
-      <div className="container mx-auto flex items-center justify-between px-4 py-6">
+      <div className="container mx-auto flex items-center justify-between px-4 py-2">
         <Logo
           className={clsx(
-            "after:bg-primary-foreground transition-all after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:duration-300",
+            "after:bg-primary-foreground !max-w-38 transition-all after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:duration-300 xl:!max-w-52",
             {
               ["relative ml-4 text-fuchsia-400 duration-400 after:w-full"]:
                 isOpen,
@@ -92,7 +92,7 @@ export default function Header() {
               <NavigationMenuLink
                 href="/"
                 className={clsx(
-                  "text-primary-foreground md:text-lg lg:text-xl xl:text-2xl",
+                  "text-primary-foreground md:text-md lg:text-lg xl:text-xl",
                   navigationMenuTriggerStyle(),
                 )}
               >
@@ -100,7 +100,7 @@ export default function Header() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-primary-foreground md:text-lg lg:text-xl xl:text-2xl">
+              <NavigationMenuTrigger className="text-primary-foreground md:text-md lg:text-lg xl:text-xl">
                 <Link href={"/services"}>Nuestros servicios</Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>

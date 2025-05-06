@@ -25,7 +25,7 @@ export default function RootLayout({
         className={`${anuphan.variable} flex min-h-screen flex-col antialiased`}
       >
         <Header />
-        <main className="flex-grow pt-[85px]">{children}</main>
+        <main className="mt-16 flex-grow lg:mt-20">{children}</main>
         <Footer />
       </body>
     </html>
