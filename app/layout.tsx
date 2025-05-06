@@ -21,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anuphan.variable} antialiased`}>
+      <body
+        className={`${anuphan.variable} flex min-h-screen flex-col antialiased`}
+      >
         <Header />
-        <main className="pt-[85px]">{children}</main>
+        <main className="flex-grow pt-[85px]">{children}</main>
         <Footer />
       </body>
     </html>
