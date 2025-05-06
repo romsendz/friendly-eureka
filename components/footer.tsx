@@ -29,29 +29,20 @@ const Footer = () => {
         </ul>
         <div className="flex flex-col items-center gap-4">
           <div className="flex flex-col items-center gap-2">
-            <Link href={"tel:+34000000000"} className="hover:underline">
-              +34 000 000 000
+            <Link href={"tel:+34610664584"} className="hover:underline">
+              +34 610 664 584
             </Link>
             <Link
-              href={"mailto:example@example.com"}
+              href={"mailto:santecnicaiberica2021@gmail.com"}
               className="hover:underline"
             >
-              ejemplo@ejemplo.com
+              santecnicaiberica2021@gmail.com
             </Link>
           </div>
           <div className="flex items-center gap-4">
             <SocialIcon
               title="Facebook"
-              url="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ height: "2rem", width: "2rem" }}
-              className="transition-all duration-200 hover:scale-125 hover:brightness-125 hover:filter"
-            />
-
-            <SocialIcon
-              title="Instagram"
-              url="https://www.instagram.com/"
+              url="https://www.facebook.com/people/ClimaSur/61576015197280"
               target="_blank"
               rel="noopener noreferrer"
               style={{ height: "2rem", width: "2rem" }}

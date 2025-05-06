@@ -16,20 +16,20 @@ const ContactUs = () => {
           <br />
           <div className="flex flex-col items-center gap-3">
             <Link
-              href={"tel:+34000000000"}
+              href={"tel:+34610664584"}
               className="inline-flex items-center gap-2 text-purple-900 hover:underline"
             >
               <PhoneCallIcon className="text-lime-500" />
-              +34 000 000 000
+              +34 610 664 584
             </Link>
+            <WhatsAppLink />
             <Link
-              href={"mailto:ejemplo@ejemplo.com"}
+              href={"mailto:santecnicaiberica2021@gmail.com"}
               className="inline-flex gap-2 text-purple-900 hover:underline"
             >
               <MailIcon className="text-lime-500" />
-              ejemplo@ejemplo.com
+              santecnicaiberica2021@gmail.com
             </Link>
-            <WhatsAppLink />
           </div>
         </div>
       </div>
