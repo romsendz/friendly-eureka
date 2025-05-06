@@ -1,4 +1,5 @@
 import HeroImagePreview from "@/components/hero-image-preview";
+import ContactUs from "@/components/section/contact-us";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,10 +10,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import WhatsAppLink from "@/components/whatsapp-link";
 import { BENEFITS } from "@/lib/BENEFITS";
 import { SERVICES } from "@/lib/SERVICES";
-import { ArrowRight, MailIcon, PhoneCallIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -23,12 +23,12 @@ export default function Home() {
       <Separator className="mt-0 lg:hidden" />
       <section className="lg:hidden">
         <div className="container mx-auto px-4 py-8">
-          <h2 className="mb-6 text-4xl">
+          <h1 className="mb-6 text-4xl">
             La Comodidad Empieza{" "}
             <span className="text-brand bg-secondary rounded-sm whitespace-nowrap italic">
               &nbsp; Aquí! &nbsp;
             </span>
-          </h2>
+          </h1>
           <br />
           <p className="px-8">
             Soluciones Confiables de Climatización, Calefacción y Gas para Cada
@@ -102,34 +102,8 @@ export default function Home() {
         </div>
       </section>
       <Separator className="my-4" />
-      <section>
-        <div className="container mx-auto px-4 py-8">
-          <h2 className="mb-6 text-center text-4xl">Contáctanos</h2>
-          <br />
-          <p className="text-center">
-            Valoramos a cada cliente y nos enorgullece construir relaciones
-            duraderas a lo largo de nuestras colaboraciones.
-          </p>
-          <br />
-          <div className="flex flex-col items-center gap-3">
-            <Link
-              href={"tel:+34000000000"}
-              className="inline-flex items-center gap-2 text-purple-900 hover:underline"
-            >
-              <PhoneCallIcon className="text-lime-500" />
-              +34 000 000 000
-            </Link>
-            <Link
-              href={"mailto:ejemplo@ejemplo.com"}
-              className="inline-flex gap-2 text-purple-900 hover:underline"
-            >
-              <MailIcon className="text-lime-500" />
-              ejemplo@ejemplo.com
-            </Link>
-            <WhatsAppLink />
-          </div>
-        </div>
-      </section>
+      <ContactUs />
+      <Separator className="my-4" />
     </>
   );
 }
