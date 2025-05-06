@@ -1,7 +1,8 @@
+import ContactUs from "@/components/section/contact-us";
 import { Metadata } from "next";
 
 export default function Page() {
-  return <ul>contact</ul>;
+  return <ContactUs />;
 }
 
 export const metadata: Metadata = {

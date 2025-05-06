@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <div className="container mx-auto px-4 py-8">
-        <h2 className="mb-6 text-center text-4xl">Política de Cookies</h2>
+        <h2 className="mb-6 text-center text-4xl">Calderas de gasóleo</h2>
         <br />
         <div>
           <p>
@@ -181,6 +181,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: "Política de Cookies | Empresa",
+  title: "Calderas de gasóleo | Nuestros servicios | Empresa",
   description: "Empresa Empresa Empresa",
 };
