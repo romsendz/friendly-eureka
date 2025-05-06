@@ -39,7 +39,7 @@ const HeroImagePreview = () => {
           <CarouselItem className="relative">
             <Image
               priority
-              src={"/converted_light_image_1.jpg"}
+              src={"/hero_image_1.jpg"}
               alt="1"
               width={600}
               height={600}
@@ -52,7 +52,7 @@ const HeroImagePreview = () => {
           <CarouselItem className="relative">
             <Image
               priority
-              src={"/converted_light_image_3.jpg"}
+              src={"/hero_image_2.jpg"}
               alt="1"
               width={600}
               height={600}
@@ -65,7 +65,7 @@ const HeroImagePreview = () => {
           <CarouselItem className="relative">
             <Image
               priority
-              src={"/converted_light_image_2.jpg"}
+              src={"/hero_image_3.jpg"}
               alt="1"
               width={600}
               height={600}
