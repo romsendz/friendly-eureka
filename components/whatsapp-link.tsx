@@ -5,7 +5,7 @@ import { SocialIcon } from "react-social-icons";
 
 const WhatsAppLink = () => {
   return (
-    <div className="inline-flex items-center gap-2 text-purple-900 hover:underline">
+    <div className="inline-flex items-center gap-2">
       <SocialIcon
         title="Whatsapp"
         onClick={(e) => e.preventDefault()}
@@ -14,7 +14,7 @@ const WhatsAppLink = () => {
       />
       <Link
         href={"https://api.whatsapp.com/"}
-        className="inline-flex gap-2 text-purple-900 hover:underline"
+        className="inline-flex gap-2 text-[rgb(30,14,98,100%)]"
       >
         Escribe en whatsapp
       </Link>

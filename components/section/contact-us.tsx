@@ -14,20 +14,20 @@ const ContactUs = () => {
             duraderas a lo largo de nuestras colaboraciones.
           </p>
           <br />
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-3 text-[rgb(30,14,98,100%)]">
             <Link
               href={"tel:+34610664584"}
-              className="inline-flex items-center gap-2 text-purple-900 hover:underline"
+              className="inline-flex items-center gap-2"
             >
-              <PhoneCallIcon className="text-lime-500" />
+              <PhoneCallIcon className="text-lime-800" />
               +34 610 664 584
             </Link>
             <WhatsAppLink />
             <Link
               href={"mailto:santecnicaiberica2021@gmail.com"}
-              className="inline-flex gap-2 text-purple-900 hover:underline"
+              className="inline-flex gap-2"
             >
-              <MailIcon className="text-lime-500" />
+              <MailIcon className="text-lime-800" />
               santecnicaiberica2021@gmail.com
             </Link>
           </div>
