@@ -101,7 +101,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Separator className="my-4" />
+      <Separator className="mt-4 border-8" />
+      <section className="border-primary-foreground relative border-8 border-x-0 text-center">
+        <Link
+          className="bg-primary hover:bg-primary-foreground text-primary-foreground hover:text-primary block px-4 py-8 text-center transition-colors duration-300 md:px-12 md:text-lg lg:px-36 lg:text-xl xl:px-68 xl:text-2xl"
+          href={"/projects"}
+        >
+          <p className="mb-4 md:text-lg lg:text-xl xl:text-2xl">Conoce</p>
+          <span className="block text-lg uppercase underline md:text-xl lg:text-2xl xl:text-3xl">
+            nuestros proyectos
+          </span>
+        </Link>
+      </section>
+      <Separator className="mb-4 border-8" />
       <ContactUs />
       <Separator className="my-4" />
     </>
