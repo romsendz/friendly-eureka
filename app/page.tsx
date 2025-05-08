@@ -12,7 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { BENEFITS } from "@/lib/BENEFITS";
 import { SERVICES } from "@/lib/SERVICES";
-import { ArrowRight } from "lucide-react";
+import { ArrowBigRightIcon, ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -111,6 +111,7 @@ export default function Home() {
           <span className="block text-lg uppercase md:text-xl lg:text-2xl xl:text-3xl">
             nuestros proyectos
           </span>
+          <ArrowBigRightIcon className="mx-auto mt-4" />
         </Link>
       </section>
       <Separator className="mb-4 border-8" />
