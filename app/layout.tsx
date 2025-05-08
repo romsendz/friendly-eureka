@@ -3,6 +3,7 @@ import { Anuphan } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const anuphan = Anuphan({
   variable: "--font-anuphan",
@@ -27,6 +28,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="mt-16 flex-grow lg:mt-20">{children}</main>
+        <Toaster />
         <Footer />
       </body>
     </html>
