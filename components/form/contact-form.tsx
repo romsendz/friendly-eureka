@@ -72,6 +72,9 @@ const ContactForm = () => {
 
       reset();
 
+      const contactSection = document.getElementById("contact");
+      contactSection?.scrollIntoView();
+
       // Reset success state after a delay
     } catch (error) {
       console.error(error);
@@ -92,7 +95,7 @@ const ContactForm = () => {
       )}
       <Card
         className={clsx("bg-primary px-6", {
-          ["pointer-events-none opacity-0"]: formState.isSubmitSuccessful,
+          ["hidden"]: formState.isSubmitSuccessful,
         })}
       >
         <Form {...form}>

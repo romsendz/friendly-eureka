@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const ContactUs = ({ className }: { className?: string }) => {
   return (
-    <section className={className}>
-      <div className="container mx-auto px-4 lg:px-16 xl:px-24">
+    <section className={className} id="contact">
+      <div className="container mx-auto lg:px-16 xl:px-24">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16">
           <div className="lg:flex lg:flex-col lg:justify-between">
             <div>
