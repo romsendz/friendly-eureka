@@ -136,12 +136,12 @@ export default function Header() {
             size="icon"
             variant="ghost"
             onClick={() => setIsOpen(!isOpen)}
-            className="text-primary-foreground md:hidden"
+            className="text-background md:hidden"
           >
             {isOpen ? (
-              <XIcon className="!h-3/4 !w-3/4" />
+              <XIcon className="!h-full !w-full" />
             ) : (
-              <MenuIcon className="!h-3/4 !w-3/4" />
+              <MenuIcon className="!h-full !w-full" />
             )}
           </Button>
         </div>
