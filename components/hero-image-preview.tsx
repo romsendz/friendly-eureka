@@ -40,7 +40,7 @@ const HeroImagePreview = () => {
             <Image
               priority
               src={"/hero_image_1.jpg"}
-              alt="1"
+              alt="Constructor profesional que instala calefacción por suelo radiante"
               width={600}
               height={600}
               className="w-full brightness-75"
@@ -53,7 +53,7 @@ const HeroImagePreview = () => {
             <Image
               priority
               src={"/hero_image_2.jpg"}
-              alt="1"
+              alt="El constructor profesional y el cliente se dan un apretón de manos amistoso."
               width={600}
               height={600}
               className="w-full brightness-75"
@@ -66,7 +66,7 @@ const HeroImagePreview = () => {
             <Image
               priority
               src={"/hero_image_3.jpg"}
-              alt="1"
+              alt="Una mujer se recuesta en el sofá y disfruta de la comodidad del hogar."
               width={600}
               height={600}
               className="w-full brightness-75"
