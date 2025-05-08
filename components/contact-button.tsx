@@ -7,7 +7,10 @@ const ContactButton = () => {
   return (
     <Button
       asChild
-      className={clsx(styles.contactButton, "md:text-md lg:text-lg xl:text-xl")}
+      className={clsx(
+        styles.contactButton,
+        "lg:text-md text-xs md:text-sm xl:text-lg",
+      )}
     >
       <Link href="/contact">Contáctenos</Link>
     </Button>
