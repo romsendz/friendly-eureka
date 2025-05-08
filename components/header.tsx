@@ -50,9 +50,12 @@ ListItem.displayName = "ListItem";
 export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const menuInnerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setServicesOpen(false);
     if (isOpen) {
       document.body.style.overflow = "hidden";
     }
@@ -62,12 +65,15 @@ export default function Header() {
   }, [isOpen]);
 
   useEffect(() => {
-    if (menuRef.current) {
-      menuRef.current.style.maxHeight = isOpen
-        ? menuRef.current.scrollHeight + "px"
-        : "0px";
+    if (menuRef.current && menuInnerRef.current) {
+      if (isOpen) {
+        menuRef.current.style.maxHeight =
+          menuInnerRef.current.scrollHeight + "px";
+      } else {
+        menuRef.current.style.maxHeight = "0px";
+      }
     }
-  }, [isOpen]);
+  }, [isOpen, servicesOpen]); // Add servicesOpen too!
 
   useEffect(() => {
     setIsOpen(false);
@@ -165,28 +171,69 @@ export default function Header() {
         className="bg-secondary relative z-50 overflow-hidden transition-all duration-300 ease-in-out md:hidden"
         style={{ maxHeight: 0 }}
       >
-        <ul className="flex flex-col items-center justify-center space-y-6 py-8">
-          {MENU_ITEMS.map((linkItem) => (
-            <li
-              key={linkItem.name}
-              className="text-secondary-foreground active:bg-primary hover:bg-primary active:text-primary-foreground hover:text-primary-foreground m-0 w-full py-4 transition-colors"
-            >
-              <Link
-                href={linkItem.href}
-                onClick={() => {
-                  if (pathname === linkItem.href) {
-                    setIsOpen(false);
-                    window.scrollTo(0, 0);
-                  }
-                }}
-                className="inline-flex w-full items-center justify-center gap-2 align-middle active:underline"
-              >
-                {linkItem.icon}
-                {linkItem.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div ref={menuInnerRef}>
+          <ul className="flex flex-col items-center justify-center space-y-24 py-8">
+            {MENU_ITEMS.map((linkItem) => {
+              const isServices = linkItem.href === "/services";
+              return (
+                <li
+                  key={linkItem.name}
+                  className="text-secondary-foreground active:bg-primary hover:bg-primary active:text-primary-foreground hover:text-primary-foreground m-0 w-full transition-colors"
+                >
+                  {isServices ? (
+                    <>
+                      <div
+                        onClick={() => setServicesOpen((prev) => !prev)}
+                        className="flex items-center justify-center"
+                      >
+                        <Link
+                          href={"/services"}
+                          onClick={
+                            servicesOpen ? () => {} : (e) => e.preventDefault()
+                          }
+                          className="inline-flex items-center justify-center gap-2 py-4"
+                        >
+                          {linkItem.icon}
+                          {linkItem.name}
+                        </Link>
+                      </div>
+
+                      {servicesOpen && (
+                        <ul className="bg-secondary pb-4 text-black">
+                          {linkItem.subs?.map((service) => (
+                            <li key={service.header}>
+                              <Link
+                                href={service.link}
+                                onClick={() => setIsOpen(false)}
+                                className="hover:bg-primary active:bg-primary active:text-primary-foreground hover:text-primary-foreground block px-6 py-2 text-center text-sm"
+                              >
+                                {service.header}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={linkItem.href}
+                      onClick={() => {
+                        if (pathname === linkItem.href) {
+                          setIsOpen(false);
+                          window.scrollTo(0, 0);
+                        }
+                      }}
+                      className="inline-flex w-full items-center justify-center gap-2 py-4"
+                    >
+                      {linkItem.icon}
+                      {linkItem.name}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </nav>
     </header>
   );
