@@ -20,7 +20,6 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { SERVICES } from "@/lib/SERVICES";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -88,46 +87,51 @@ export default function Header() {
         />
         <NavigationMenu className="hidden md:block">
           <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                href="/"
-                className={clsx(
-                  "text-primary-foreground md:text-md lg:text-lg xl:text-xl",
-                  navigationMenuTriggerStyle(),
-                )}
-              >
-                Inicio
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-primary-foreground md:text-md lg:text-lg xl:text-xl">
-                <Link href={"/services"}>Nuestros servicios</Link>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {SERVICES.map((service) => (
-                    <ListItem
-                      key={service.header}
-                      title={service.header}
-                      href={service.link}
-                    >
-                      {service.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                href="/projects"
-                className={clsx(
-                  "text-primary-foreground md:text-md lg:text-lg xl:text-xl",
-                  navigationMenuTriggerStyle(),
-                )}
-              >
-                Nuestros proyectos
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+            {MENU_ITEMS.map((item) => {
+              if (item.name === "Contacto") return;
+              const isActive = pathname === item.href;
+              return (
+                <NavigationMenuItem
+                  key={item.name}
+                  className={clsx({
+                    ["border-b border-amber-50 hover:border-0"]: isActive,
+                  })}
+                >
+                  {item.subs ? (
+                    <>
+                      <NavigationMenuTrigger className="text-primary-foreground md:text-md lg:text-lg xl:text-xl">
+                        <Link href={item.href}>{item.name}</Link>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                          {item.subs.map((service) => (
+                            <ListItem
+                              key={service.header}
+                              title={service.header}
+                              href={service.link}
+                            >
+                              {service.description}
+                            </ListItem>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>{" "}
+                    </>
+                  ) : (
+                    <>
+                      <NavigationMenuLink
+                        href={item.href}
+                        className={clsx(
+                          "text-primary-foreground md:text-md lg:text-lg xl:text-xl",
+                          navigationMenuTriggerStyle(),
+                        )}
+                      >
+                        {item.name}
+                      </NavigationMenuLink>
+                    </>
+                  )}
+                </NavigationMenuItem>
+              );
+            })}
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex items-center gap-4">

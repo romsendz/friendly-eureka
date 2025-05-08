@@ -4,10 +4,16 @@ import {
   HardHatIcon,
   HomeIcon,
 } from "lucide-react";
+import { SERVICES } from "./SERVICES";
 
 const MENU_ITEMS = [
   { name: "Inicio", href: "/", icon: <HomeIcon /> },
-  { name: "Nuestros servicios", href: "/services", icon: <HardHatIcon /> },
+  {
+    name: "Nuestros servicios",
+    href: "/services",
+    icon: <HardHatIcon />,
+    subs: SERVICES,
+  },
   {
     name: "Nuestros proyectos",
     href: "/projects",
