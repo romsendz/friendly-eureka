@@ -9,7 +9,7 @@ import Image from "next/image";
 const HeroImagePreview = () => {
   const plugin = useRef([
     Autoplay({
-      delay: 4500,
+      delay: 3500,
     }),
     Fade({}),
   ]);
