@@ -80,10 +80,10 @@ export default function Home() {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="mb-auto">
                   <ul className="flex flex-col gap-1">
                     {service.subs.map((sub) => (
-                      <li key={sub} className="md:text-md text-sm">
+                      <li key={sub} className="md:text-md text-xs">
                         {sub}
                       </li>
                     ))}
@@ -104,18 +104,18 @@ export default function Home() {
       <Separator className="mt-4 border-8" />
       <section className="border-primary-foreground relative border-8 border-x-0 text-center">
         <Link
-          className="bg-primary hover:bg-primary-foreground text-primary-foreground hover:text-primary block px-4 py-8 text-center transition-colors duration-300 md:px-12 md:text-lg lg:px-36 lg:text-xl xl:px-68 xl:text-2xl"
+          className="bg-primary hover:bg-primary-foreground active:bg-primary-foreground active:text-primary text-primary-foreground hover:text-primary block px-4 py-8 text-center transition-colors duration-300 md:px-12 md:text-lg lg:px-36 lg:text-xl xl:px-68 xl:text-2xl"
           href={"/projects"}
         >
           <p className="mb-4 md:text-lg lg:text-xl xl:text-2xl">Conoce</p>
-          <span className="block text-lg uppercase underline md:text-xl lg:text-2xl xl:text-3xl">
+          <span className="block text-lg uppercase md:text-xl lg:text-2xl xl:text-3xl">
             nuestros proyectos
           </span>
         </Link>
       </section>
       <Separator className="mb-4 border-8" />
-      <ContactUs />
-      <Separator className="my-4" />
+      <ContactUs className="pt-8" />
+      <Separator className="mt-4" />
     </>
   );
 }
