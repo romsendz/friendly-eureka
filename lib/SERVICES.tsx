@@ -23,6 +23,9 @@ export const SERVICES = [
       "Instalación de gas",
       "Toma de combustión",
       "Corrección de anomalías",
+      "Certificados de instalaciones de gas",
+      "Certificados termicos",
+      "Justificante de correccion de anomalias",
     ],
   },
   {
