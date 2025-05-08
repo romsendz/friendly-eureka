@@ -117,6 +117,17 @@ export default function Header() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                href="/projects"
+                className={clsx(
+                  "text-primary-foreground md:text-md lg:text-lg xl:text-xl",
+                  navigationMenuTriggerStyle(),
+                )}
+              >
+                Nuestros proyectos
+              </NavigationMenuLink>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex items-center gap-4">
