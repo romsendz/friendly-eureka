@@ -6,6 +6,5 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: "Contacto | Empresa",
-  description: "Empresa Empresa Empresa",
+  title: "Contacto | Climasur",
 };

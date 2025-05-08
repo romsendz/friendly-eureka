@@ -10,8 +10,9 @@ const anuphan = Anuphan({
 });
 
 export const metadata: Metadata = {
-  title: "Empresa",
-  description: "Empresa Empresa Empresa",
+  title: "Climasur - La Comodidad Empieza Aquí!",
+  description:
+    "Soluciones Confiables de Climatización, Calefacción y Gas para Cada Hogar. Desde aire acondicionado hasta suelo radiante, nuestro equipo de expertos ofrece soluciones personalizadas para que tu espacio sea siempre cómodo y eficiente. Nos especializamos en sistemas modernos de climatización, instalaciones de gas y calefacción, brindando seguridad, calidad y un rendimiento duradero en el que puedes confiar.",
 };
 
 export default function RootLayout({
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anuphan.variable} flex min-h-screen flex-col antialiased`}
+        className={`${anuphan.variable} flex min-h-screen flex-col antialiased md:!overflow-auto`}
       >
         <Header />
         <main className="mt-16 flex-grow lg:mt-20">{children}</main>

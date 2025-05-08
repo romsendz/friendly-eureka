@@ -121,6 +121,5 @@ export default function Home() {
 }
 
 export const metadata: Metadata = {
-  title: "Inicio | Empresa",
-  description: "Empresa Empresa Empresa",
+  title: "Inicio | Climasur",
 };
