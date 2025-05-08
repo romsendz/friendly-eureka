@@ -12,7 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { BENEFITS } from "@/lib/BENEFITS";
 import { SERVICES } from "@/lib/SERVICES";
-import { ArrowBigRightIcon, ArrowRight } from "lucide-react";
+import { ArrowBigRightIcon, ArrowRight, CheckIcon } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -83,8 +83,12 @@ export default function Home() {
                 <CardContent className="mb-auto">
                   <ul className="flex flex-col gap-1">
                     {service.subs.map((sub) => (
-                      <li key={sub} className="md:text-md text-xs">
-                        {sub}
+                      <li
+                        key={sub}
+                        className="md:text-md flex items-center gap-2 text-xs"
+                      >
+                        <CheckIcon className="size-4 shrink-0" />
+                        <span>{sub}</span>
                       </li>
                     ))}
                   </ul>
