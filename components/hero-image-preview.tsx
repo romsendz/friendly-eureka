@@ -24,10 +24,7 @@ const HeroImagePreview = () => {
         </h2>
         <p className="text-md xl:text-md lg:text-md px-2 xl:pr-48 2xl:text-xl">
           Soluciones Confiables de Climatización, Calefacción y Gas para Cada
-          Hogar. <br /> <br /> Desde aire acondicionado hasta suelo radiante,
-          nuestro equipo de expertos ofrece soluciones personalizadas para que
-          tu espacio sea siempre cómodo y eficiente.{" "}
-          <br className="hidden 2xl:block" />{" "}
+          Hogar. <br />
           <br className="hidden 2xl:block" /> Nos especializamos en sistemas
           modernos de climatización, instalaciones de gas y calefacción,
           brindando seguridad, calidad y un rendimiento duradero en el que
