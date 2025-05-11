@@ -2,6 +2,7 @@ import MENU_ITEMS from "@/lib/MENU_ITEMS";
 import Logo from "./logo";
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
+import WhatsAppButton from "./whatsapp-button";
 
 const Footer = () => {
   const date = new Date();
@@ -42,19 +43,9 @@ const Footer = () => {
               url="https://www.facebook.com/people/ClimaSur/61576015197280"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ height: "2rem", width: "2rem" }}
-              className="transition-all duration-200 hover:scale-125 hover:brightness-125 hover:filter"
+              className="transition-all duration-200 hover:scale-110 hover:brightness-125 hover:filter"
             />
-            <SocialIcon
-              title="Whatsapp"
-              url={`https://api.whatsapp.com/send?phone=34610664584&text=${encodeURIComponent(
-                `Estoy interesado(a) en obtener más información sobre sus servicios de climatización, aerotermia, suelo radiante, aire acondicionado o bombas de calor.\n\nMe gustaría saber:\n\nPor favor, contáctenme. Aquí están mis datos:\n\nNombre: [Tu nombre]\nTeléfono: [Tu número]\nUbicación: [Tu ciudad]\n\n¡Gracias! Espero su respuesta.`,
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ height: "2rem", width: "2rem" }}
-              className="transition-all duration-200 hover:scale-125 hover:brightness-125 hover:filter"
-            />
+            <WhatsAppButton />
           </div>
         </div>
       </div>

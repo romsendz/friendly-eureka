@@ -20,6 +20,7 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import WhatsAppButton from "./whatsapp-button";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -81,7 +82,7 @@ export default function Header() {
 
   return (
     <header className="bg-primary fixed z-50 w-full shadow-md">
-      <div className="container mx-auto flex items-center justify-between px-4 py-2">
+      <div className="relative container mx-auto flex items-center justify-between px-4 py-2">
         <Logo
           className={clsx(
             "after:bg-primary-foreground !max-w-38 transition-all after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:duration-300 xl:!max-w-52",
@@ -142,6 +143,7 @@ export default function Header() {
         </NavigationMenu>
         <div className="flex items-center gap-4">
           <ContactButton />
+          <WhatsAppButton className="!hidden !size-10 lg:!block" />
           <Button
             size="icon"
             variant="ghost"

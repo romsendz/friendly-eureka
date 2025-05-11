@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
+import WhatsAppButton from "@/components/whatsapp-button";
 
 const anuphan = Anuphan({
   variable: "--font-anuphan",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <main className="mt-16 flex-grow lg:mt-20">{children}</main>
         <Toaster />
         <Footer />
+        <WhatsAppButton className="!fixed !right-4 !bottom-4 !size-12 lg:!hidden" />
       </body>
     </html>
   );
