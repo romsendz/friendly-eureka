@@ -35,10 +35,6 @@ const ContactUs = ({ className }: { className?: string }) => {
                   <MailIcon className="text-lime-800" />
                   santecnicaiberica2021@gmail.com
                 </Link>
-                <span className="inline-flex gap-2">
-                  <MapPinCheckInsideIcon className="text-lime-800" />
-                  C/ Rio Lozoya 22, El Álamo, España
-                </span>
               </div>
             </div>
             <Separator className="bg-primary-foreground hidden lg:my-8 lg:block" />
