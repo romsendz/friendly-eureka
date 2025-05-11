@@ -34,7 +34,7 @@ const ContactFormSchema = z.object({
 
 type ContactFormValues = z.infer<typeof ContactFormSchema>;
 
-const ContactForm = () => {
+const ContactForm = ({ className }: { className?: string }) => {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
@@ -73,7 +73,13 @@ const ContactForm = () => {
       reset();
 
       const contactSection = document.getElementById("contact");
-      contactSection?.scrollIntoView();
+      setTimeout(() => {
+        contactSection?.scrollIntoView({
+          block: "start",
+          inline: "nearest",
+          behavior: "smooth",
+        });
+      }, 10);
 
       // Reset success state after a delay
     } catch (error) {
@@ -94,16 +100,16 @@ const ContactForm = () => {
         </div>
       )}
       <Card
-        className={clsx("bg-primary px-6", {
+        className={clsx("bg-primary px-6", className, {
           ["hidden"]: formState.isSubmitSuccessful,
         })}
       >
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
             <div>
-              <h2 className="text-primary-foreground mb-2 text-lg font-semibold">
+              <h3 className="text-primary-foreground text-md mb-2 font-semibold lg:text-lg">
                 Nombre *
-              </h2>
+              </h3>
               <FormField
                 control={form.control}
                 name="name"
@@ -113,7 +119,7 @@ const ContactForm = () => {
                       <Input
                         autoComplete="on"
                         placeholder="Su nombre"
-                        className="text-background h-12 rounded-full border-gray-200 px-5"
+                        className="text-background h-8 rounded-full border-gray-200 px-5 lg:h-12"
                         {...field}
                       />
                     </FormControl>
@@ -123,9 +129,9 @@ const ContactForm = () => {
               />
             </div>
             <div>
-              <h2 className="text-primary-foreground mb-2 text-lg font-semibold">
+              <h3 className="text-primary-foreground text-md mb-2 font-semibold lg:text-lg">
                 Mensaje
-              </h2>
+              </h3>
               <FormField
                 control={form.control}
                 name="message"
@@ -134,7 +140,7 @@ const ContactForm = () => {
                     <FormControl>
                       <Textarea
                         placeholder="Describa su solicitud"
-                        className="text-background border-primary-foreground min-h-32 rounded-lg p-4"
+                        className="text-background border-primary-foreground min-h-24 rounded-lg p-4 lg:min-h-42"
                         {...field}
                       />
                     </FormControl>
@@ -144,9 +150,9 @@ const ContactForm = () => {
               />
             </div>
             <div>
-              <h2 className="text-primary-foreground mb-2 text-lg font-semibold">
+              <h3 className="text-primary-foreground text-md mb-2 font-semibold lg:text-lg">
                 Email *
-              </h2>
+              </h3>
               <FormField
                 control={form.control}
                 name="email"
@@ -156,7 +162,7 @@ const ContactForm = () => {
                       <Input
                         autoComplete="on"
                         placeholder="Tu correo electrónico"
-                        className="text-background border-primary-foreground h-12 rounded-full px-5"
+                        className="text-background border-primary-foreground h-8 rounded-full px-5 lg:h-12"
                         {...field}
                       />
                     </FormControl>
@@ -167,9 +173,9 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <h2 className="text-primary-foreground mb-2 text-lg font-semibold">
+              <h3 className="text-primary-foreground text-md mb-2 font-semibold lg:text-lg">
                 Teléfono *
-              </h2>
+              </h3>
               <FormField
                 control={form.control}
                 name="phone"
@@ -179,7 +185,7 @@ const ContactForm = () => {
                       <Input
                         autoComplete="on"
                         placeholder="Tu número de teléfono"
-                        className="text-background border-primary-foreground h-12 rounded-full px-5"
+                        className="text-background border-primary-foreground h-8 rounded-full px-5 lg:h-12"
                         {...field}
                       />
                     </FormControl>
@@ -188,8 +194,7 @@ const ContactForm = () => {
                 )}
               />
             </div>
-
-            <div className="mt-12 flex flex-col justify-end gap-4">
+            <div className="mt-6 flex flex-col justify-end gap-4 lg:mt-12">
               <FormField
                 control={form.control}
                 name="consent"
@@ -207,6 +212,8 @@ const ContactForm = () => {
                         <Link
                           className="underline hover:text-amber-700 active:text-amber-700"
                           href={"/privacy-policy"}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           política de privacidad.
                         </Link>

@@ -9,7 +9,7 @@ const ContactButton = () => {
       asChild
       className={clsx(
         styles.contactButton,
-        "lg:text-md text-xs md:text-sm xl:text-lg",
+        "lg:text-md text-xs transition-all duration-200 hover:scale-110 md:text-sm xl:text-lg",
       )}
     >
       <Link

@@ -64,7 +64,7 @@ export default function Home() {
         </Link>
       </section>
       <Separator className="mb-4 border-8" />
-      <ContactUs className="mx-2 pt-8" />
+      <ContactUs className="mx-2 py-8" />
       <Separator className="mt-4" />
     </>
   );
