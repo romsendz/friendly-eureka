@@ -37,14 +37,11 @@ const HeroImagePreview = () => {
             <Image
               priority
               src={"/hero_image_1.jpg"}
-              alt="Constructor profesional que instala calefacción por suelo radiante"
+              alt="Comfort"
               width={600}
               height={600}
               className="w-full brightness-75"
             />
-            <span className="absolute top-3/4 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center text-3xl text-amber-100 lg:hidden">
-              Text 1
-            </span>
           </CarouselItem>
           <CarouselItem className="relative">
             <Image
@@ -55,9 +52,6 @@ const HeroImagePreview = () => {
               height={600}
               className="w-full brightness-75"
             />
-            <span className="absolute top-3/4 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center text-3xl text-amber-100 lg:hidden">
-              Text 2
-            </span>
           </CarouselItem>
           <CarouselItem className="relative">
             <Image
@@ -68,9 +62,6 @@ const HeroImagePreview = () => {
               height={600}
               className="w-full brightness-75"
             />
-            <span className="absolute top-3/4 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center text-3xl text-amber-100 lg:hidden">
-              Text 3
-            </span>
           </CarouselItem>
         </CarouselContent>
         <div className="absolute top-0 right-0 bottom-0 left-0 hidden bg-[linear-gradient(90deg,rgba(241,239,236,1)_1%,rgba(241,239,236,0)_25%)] lg:block" />
