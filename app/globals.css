@@ -142,6 +142,10 @@ body {
   vertical-align: top;
 }
 
+.image-gallery-slides {
+  touch-action: auto !important;
+}
+
 .fullscreen .image-gallery-slide img {
   min-height: 75vh;
 }
