@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export default function Page() {
   return (
     <>
-      <h2 className="mb-6 text-center text-4xl">Aviso Legal</h2>
+      <h2 className="mb-6 py-16 text-center text-4xl">Aviso Legal</h2>
       <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eum

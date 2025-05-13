@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export default function Page() {
   return (
-    <section className="mx-auto max-w-3xl px-4">
+    <section className="mx-auto max-w-3xl px-4 py-12">
       <h2 className="mb-8 text-center text-4xl font-bold">
         Política de Cookies
       </h2>
