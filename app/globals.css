@@ -131,3 +131,17 @@ html {
 body {
   font-family: var(--font-anuphan), sans-serif;
 }
+
+/* rewrite some styles for image-gallery */
+.image-gallery-slide img {
+  width: 100%;
+  height: 500px;
+}
+
+.image-gallery-thumbnail {
+  vertical-align: top;
+}
+
+.fullscreen .image-gallery-slide img {
+  min-height: 75vh;
+}
