@@ -10,13 +10,13 @@ type ServiceProps = {
 
 const Service = ({ name, description, image, imageAlt }: ServiceProps) => {
   return (
-    <section className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
+    <section className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
       <div className="relative aspect-video w-full max-w-xl">
         <Image
           src={image}
           alt={imageAlt}
           fill
-          className="rounded-xl object-contain"
+          className="mt-2 rounded-xl object-cover shadow-2xl"
           sizes="(max-width: 768px) 100vw, 50vw"
           priority
         />

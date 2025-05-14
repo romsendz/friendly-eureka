@@ -7,9 +7,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="px-4 lg:px-20">
+    <>
       <h2 className="mb-12 text-center text-4xl font-bold">Climatización</h2>
-      {/* Aire Acondicionado */}
       <Service
         name={"Aire Acondicionado"}
         image={"/other/aire-acondicionado.jpg"}
@@ -58,7 +57,6 @@ export default function Page() {
           </>
         }
       />
-      {/* Aerotermia */}
       <Service
         name={"Aerotermia"}
         image="/other/aerotermia.jpg"
@@ -92,7 +90,6 @@ export default function Page() {
           </>
         }
       />
-      {/* Fancoils */}
       <Service
         name={"Fancoil"}
         image={"/other/fancoil.jpg"}
@@ -113,7 +110,6 @@ export default function Page() {
           </>
         }
       />
-      {/* Conductos de fibra */}
       <Service
         name={"Conductos de fibra"}
         image={"/other/conductos-de-fibra.jpg"}
@@ -130,6 +126,6 @@ export default function Page() {
           </>
         }
       />
-    </div>
+    </>
   );
 }
