@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { ArrowRightIcon, CheckIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import clsx from "clsx";
@@ -51,9 +51,13 @@ const Services = ({ className }: { className?: string }) => {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button asChild className="mx-auto w-2/3">
-                  <Link href={service.link}>
-                    más <ArrowRightIcon />
+                <Button
+                  asChild
+                  className="mx-auto w-2/3"
+                  variant={service.buttonLink ? "secondary" : "default"}
+                >
+                  <Link href={service.buttonLink || service.link}>
+                    {service.buttonText} {service.buttonIcon}
                   </Link>
                 </Button>
               </CardFooter>

@@ -1,98 +1,18 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <>
-      <h2 className="mb-6 text-center text-4xl">Calderas de gasóleo</h2>
+      <h2 className="mb-12 text-center text-4xl font-bold">
+        Calderas de gasóleo
+      </h2>
       <br />
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eum
-          velit quam odit doloribus corporis voluptatem aspernatur ad excepturi
-          vitae nostrum dolore suscipit, possimus, culpa minus fugiat.
-          Provident, minus excepturi. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ducimus eum velit quam odit doloribus corporis
-          voluptatem aspernatur ad excepturi vitae nostrum dolore suscipit,
-          possimus, culpa minus fugiat. Provident, minus excepturi.Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Ducimus eum velit quam
-          odit doloribus corporis voluptatem aspernatur ad excepturi vitae
-          nostrum dolore suscipit, possimus, culpa minus fugiat. Provident,
-          minus excepturi.Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Ducimus eum velit quam odit doloribus corporis voluptatem
-          aspernatur ad excepturi vitae nostrum dolore suscipit, possimus, culpa
-          minus fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus excepturi.Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Ducimus eum velit quam odit doloribus
-          corporis voluptatem aspernatur ad excepturi vitae nostrum dolore
-          suscipit, possimus, culpa minus fugiat. Provident, minus
-          excepturi.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Ducimus eum velit quam odit doloribus corporis voluptatem aspernatur
-          ad excepturi vitae nostrum dolore suscipit, possimus, culpa minus
-          fugiat. Provident, minus
-        </p>
-      </div>
+      <p>Instalamos, páramos y mantenemos su caldera.</p>
+      <br />
+      <Link href={"#contact"} className="italic underline">
+        Por favor póngase en contacto con nosotros para más detalles.
+      </Link>
     </>
   );
 }

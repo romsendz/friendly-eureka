@@ -1,10 +1,13 @@
+import { ArrowDownIcon, ArrowRightIcon } from "lucide-react";
+
 export const SERVICES = [
   {
     header: "Climatización",
     description:
       "Soluciones eficientes para controlar la temperatura interior.",
     link: "/services/climatizacion",
-    icon: null,
+    buttonIcon: <ArrowRightIcon />,
+    buttonText: "más",
     subs: [
       "Aire Acondicionado",
       "Aerotermia",
@@ -16,7 +19,8 @@ export const SERVICES = [
     header: "Gas",
     description: "Instalaciones seguras y mantenimiento de sistemas de gas.",
     link: "/services/gas",
-    icon: null,
+    buttonIcon: <ArrowRightIcon />,
+    buttonText: "más",
     subs: [
       "Calderas",
       "Calentadores",
@@ -32,14 +36,18 @@ export const SERVICES = [
     header: "Calefacción",
     description: "Sistemas modernos para un calor confortable en casa.",
     link: "/services/calefaccion",
-    icon: null,
+    buttonIcon: <ArrowRightIcon />,
+    buttonText: "más",
     subs: ["Suelo radiante", "Radiadores"],
   },
   {
     header: "Calderas de gasóleo",
-    description: "Calor potente con tecnología de calderas eficientes.",
+    description:
+      "Instalamos, páramos y mantenemos su caldera. Por favor póngase en contacto con nosotros para más detalles.",
     link: "/services/calderas-de-gasoleo",
-    icon: null,
+    buttonLink: "#contact",
+    buttonText: "contáctanos",
+    buttonIcon: <ArrowDownIcon />,
     subs: [],
   },
 ];
