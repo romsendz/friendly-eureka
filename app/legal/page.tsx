@@ -24,7 +24,8 @@ export default function Page() {
             <strong>Domicilio social:</strong> C/ Río Lozoya 22, El Álamo
           </li>
           <li>
-            <strong>Correo electrónico:</strong> santecnicaiberica2021@gmail.com
+            <strong>Correo electrónico:</strong>
+            <br className="md:hidden" /> santecnicaiberica2021@gmail.com
           </li>
           <li>
             <strong>Teléfono:</strong> 610664584
