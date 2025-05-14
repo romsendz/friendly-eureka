@@ -95,11 +95,11 @@ export default function Header() {
         <NavigationMenu className="hidden md:block">
           <NavigationMenuList>
             {MENU_ITEMS.map((item) => {
-              if (item.name === "Contacto") return;
+              if (item.href === "/contact") return;
               const isActive = pathname === item.href;
               return (
                 <NavigationMenuItem
-                  key={item.name}
+                  key={item.href}
                   className={clsx({
                     ["border-b border-amber-50 hover:border-0"]: isActive,
                   })}
@@ -128,7 +128,7 @@ export default function Header() {
                       <NavigationMenuLink
                         href={item.href}
                         className={clsx(
-                          "text-primary-foreground md:text-md lg:text-lg xl:text-xl",
+                          "text-primary-foreground md:text-md inline-flex flex-row lg:text-lg xl:text-xl",
                           navigationMenuTriggerStyle(),
                         )}
                       >
@@ -179,7 +179,7 @@ export default function Header() {
               const isServices = linkItem.href === "/services";
               return (
                 <li
-                  key={linkItem.name}
+                  key={linkItem.href}
                   className="text-secondary-foreground active:bg-primary hover:bg-primary active:text-primary-foreground hover:text-primary-foreground m-0 w-full transition-colors"
                 >
                   {isServices ? (
@@ -193,10 +193,10 @@ export default function Header() {
                           onClick={
                             servicesOpen ? () => {} : (e) => e.preventDefault()
                           }
-                          className="inline-flex items-center justify-center gap-2 py-4"
+                          className="inline-flex gap-2 py-4"
                         >
-                          {linkItem.icon}
-                          {linkItem.name}
+                          <span>{linkItem.icon}</span>
+                          <span>{linkItem.name}</span>
                         </Link>
                       </div>
 
@@ -227,8 +227,8 @@ export default function Header() {
                       }}
                       className="inline-flex w-full items-center justify-center gap-2 py-4"
                     >
-                      {linkItem.icon}
-                      {linkItem.name}
+                      <span>{linkItem.icon}</span>
+                      <span>{linkItem.name}</span>
                     </Link>
                   )}
                 </li>

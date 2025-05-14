@@ -7,19 +7,35 @@ import {
 import { SERVICES } from "./SERVICES";
 
 const MENU_ITEMS = [
-  { name: "Inicio", href: "/", icon: <HomeIcon /> },
   {
-    name: "Nuestros servicios",
+    name: <span className="font-bold">Inicio</span>,
+    href: "/",
+    icon: <HomeIcon />,
+  },
+  {
+    name: (
+      <>
+        Nuestros <span className="font-bold">servicios</span>
+      </>
+    ),
     href: "/services",
     icon: <HardHatIcon />,
     subs: SERVICES,
   },
   {
-    name: "Nuestros proyectos",
+    name: (
+      <>
+        Nuestros <span className="font-bold">proyectos</span>
+      </>
+    ),
     href: "/projects",
     icon: <BriefcaseIcon />,
   },
-  { name: "Contacto", href: "/contact", icon: <HandshakeIcon /> },
+  {
+    name: <span className="font-bold">Contacto</span>,
+    href: "/contact",
+    icon: <HandshakeIcon />,
+  },
 ];
 
 export default MENU_ITEMS;

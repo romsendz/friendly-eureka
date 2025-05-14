@@ -15,11 +15,11 @@ const Footer = () => {
         </div>
         <ul>
           {MENU_ITEMS.map((menuItem) => (
-            <li key={menuItem.name} className="my-2 text-center">
-              <Link
-                href={menuItem.href}
-                className="inline-flex gap-2 hover:underline"
-              >
+            <li
+              key={menuItem.href}
+              className="my-2 text-center hover:underline"
+            >
+              <Link href={menuItem.href} className="inline">
                 {menuItem.name}
               </Link>
             </li>
