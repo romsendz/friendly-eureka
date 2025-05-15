@@ -12,9 +12,15 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import clsx from "clsx";
 
-const Services = ({ className }: { className?: string }) => {
+const Services = ({
+  className,
+  style,
+}: {
+  className?: string;
+  style: React.CSSProperties;
+}) => {
   return (
-    <section>
+    <section style={style}>
       <div
         className={clsx(
           "container mx-auto md:px-12 lg:px-36 xl:px-68",

@@ -49,7 +49,15 @@ export default function Home() {
         </div>
       </section>
       <Separator className="my-4" />
-      <Services className="px-12 py-8" />
+      <Services
+        className="px-12 py-8"
+        style={{
+          backgroundImage: "url('/background-blue.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+        }}
+      />
       <Separator className="mt-4 border-8" />
       <section className="border-primary-foreground relative border-8 border-x-0 text-center">
         <Link
