@@ -8,7 +8,7 @@ export default function Page() {
         Calderas de gasóleo
       </h2>
       <br />
-      <p>Instalamos, páramos y mantenemos su caldera.</p>
+      <p>Instalamos, reparamos y mantenemos su caldera.</p>
       <br />
       <Link href={"#contact"} className="italic underline">
         Por favor póngase en contacto con nosotros para más detalles.
