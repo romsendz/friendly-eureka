@@ -17,7 +17,7 @@ const Services = ({
   style,
 }: {
   className?: string;
-  style: React.CSSProperties;
+  style?: React.CSSProperties;
 }) => {
   return (
     <section style={style}>
