@@ -17,10 +17,19 @@ export const SERVICES = [
   },
   {
     header: "Gas",
-    description: "Instalaciones seguras y mantenimiento de sistemas de gas.",
+    description: (
+      <>
+        Instalaciones seguras y mantenimiento de sistemas de gas. <br />
+        <span className="text-primary italic">
+          Por favor póngase en contacto con nosotros para una consulta.
+        </span>
+      </>
+    ),
     link: "/services/gas",
-    buttonIcon: <ArrowRightIcon />,
-    buttonText: "más",
+
+    buttonLink: "#contact",
+    buttonText: "contáctanos",
+    buttonIcon: <ArrowDownIcon />,
     subs: [
       "Calderas",
       "Calentadores",
@@ -42,8 +51,14 @@ export const SERVICES = [
   },
   {
     header: "Calderas de gasóleo",
-    description:
-      "Instalamos, páramos y mantenemos su caldera. Por favor póngase en contacto con nosotros para más detalles.",
+    description: (
+      <>
+        Instalamos, reparamos y mantenemos su caldera. <br />
+        <span className="text-primary italic">
+          Por favor póngase en contacto con nosotros para una consulta.
+        </span>
+      </>
+    ),
     link: "/services/calderas-de-gasoleo",
     buttonLink: "#contact",
     buttonText: "contáctanos",
