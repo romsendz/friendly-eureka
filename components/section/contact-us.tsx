@@ -4,6 +4,7 @@ import WhatsAppLink from "../whatsapp-link";
 import ContactForm from "../form/contact-form";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
+import CompanyName from "../company-name";
 
 const ContactUs = ({ className }: { className?: string }) => {
   return (
@@ -41,6 +42,7 @@ const ContactUs = ({ className }: { className?: string }) => {
                   <MailIcon className="text-lime-800" />
                   santecnicaiberica2021@gmail.com
                 </Link>
+                <CompanyName />
               </div>
             </div>
             <Separator className="bg-primary-foreground hidden lg:my-8 lg:block" />

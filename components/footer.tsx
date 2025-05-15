@@ -3,15 +3,15 @@ import Logo from "./logo";
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
 import WhatsAppButton from "./whatsapp-button";
+import CompanyName from "./company-name";
 
 const Footer = () => {
-  const date = new Date();
   return (
     <footer className="bg-primary relative flex w-full flex-col items-center gap-8 bg-no-repeat px-4 py-6 shadow-2xl before:absolute before:top-[0] before:left-[0] before:z-0 before:h-full before:w-full before:bg-[url(/footer-background.png)] before:blur-[5px] before:filter before:content-[''] lg:gap-2">
       <div className="text-primary-foreground z-1 container space-y-8 lg:grid lg:w-full lg:grid-cols-[repeat(3,_1fr)] lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
         <div className="flex flex-col items-center gap-2">
           <Logo />
-          <span>{`© ${date.getFullYear()} Santecnica Iberica 2021 SL`}</span>
+          <CompanyName />
         </div>
         <ul>
           {MENU_ITEMS.map((menuItem) => (
