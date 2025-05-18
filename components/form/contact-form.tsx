@@ -20,6 +20,7 @@ import { Card } from "../ui/card";
 import { Checkbox } from "../ui/checkbox";
 import Link from "next/link";
 import clsx from "clsx";
+import { useState } from "react";
 
 // Define schema for form validation
 const ContactFormSchema = z.object({
@@ -35,6 +36,7 @@ const ContactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof ContactFormSchema>;
 
 const ContactForm = ({ className }: { className?: string }) => {
+  const [emailSent, setEmailSent] = useState(false);
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
@@ -52,10 +54,17 @@ const ContactForm = ({ className }: { className?: string }) => {
 
   const onSubmit = async (values: ContactFormValues) => {
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
-      console.log("Form submitted:", values);
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
 
       toast.success(
         <span className="text-lime-800">
@@ -69,6 +78,8 @@ const ContactForm = ({ className }: { className?: string }) => {
           ),
         },
       );
+
+      setEmailSent(true); // ✅ Only show success message on real success
 
       reset();
 
@@ -94,14 +105,14 @@ const ContactForm = ({ className }: { className?: string }) => {
 
   return (
     <div className="mx-auto mt-12 w-full max-w-md">
-      {formState.isSubmitSuccessful && (
+      {emailSent && (
         <div className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 text-center text-green-700">
           ¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.
         </div>
       )}
       <Card
         className={clsx("bg-primary px-6", className, {
-          ["hidden"]: formState.isSubmitSuccessful,
+          ["hidden"]: emailSent,
         })}
       >
         <Form {...form}>

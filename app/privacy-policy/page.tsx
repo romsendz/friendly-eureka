@@ -30,6 +30,14 @@ export default function Page() {
           SANTECNICA IBERICA 2021 SL.
         </p>
         <p>
+          Utilizamos un servicio externo de envío de correos electrónicos
+          (Resend) para procesar y enviar los mensajes enviados a través de
+          nuestro formulario de contacto. Los datos personales que proporcione
+          en el formulario (como su nombre, correo electrónico, teléfono y
+          mensaje) pueden ser tratados por Resend únicamente con el fin de
+          gestionar el envío del mensaje.
+        </p>
+        <p>
           Utilizamos Facebook Pixel para analizar el comportamiento de
           navegación de los usuarios y medir la eficacia de nuestras campañas
           publicitarias. Esta herramienta solo se activa tras obtener su

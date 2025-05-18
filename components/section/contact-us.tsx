@@ -1,7 +1,7 @@
 import { MailIcon, PhoneCallIcon } from "lucide-react";
 import Link from "next/link";
 import WhatsAppLink from "../whatsapp-link";
-//import ContactForm from "../form/contact-form";
+import ContactForm from "../form/contact-form";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
 import CompanyName from "../company-name";
@@ -11,12 +11,12 @@ const ContactUs = ({ className }: { className?: string }) => {
     <section className={className} id="contact">
       <div className="container mx-auto lg:px-16 xl:px-24">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-          {/* <div>
+          <div>
             <h2 className="mb-6 text-center text-4xl lg:block">
               Puedes enviarnos un correo
             </h2>
             <ContactForm className="mx-8" />
-          </div> */}
+          </div>
           <div className="mt-16 lg:mt-0 lg:flex lg:flex-col lg:justify-between">
             <div>
               <h2 className="mb-6 text-center text-4xl">Contáctanos</h2>
