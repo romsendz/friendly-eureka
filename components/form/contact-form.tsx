@@ -31,6 +31,7 @@ const ContactFormSchema = z.object({
   phone: z.string(),
   message: z.string().optional(),
   consent: z.boolean().refine((val) => val === true),
+  name_confirm: z.string().optional(), // 🐝 honeypot
 });
 
 type ContactFormValues = z.infer<typeof ContactFormSchema>;
@@ -45,6 +46,7 @@ const ContactForm = ({ className }: { className?: string }) => {
       phone: "",
       message: "",
       consent: false,
+      name_confirm: "", // 🐝 honeypot
     },
     mode: "onSubmit", // Validate on blur
     reValidateMode: "onChange", // Revalidate on change
@@ -230,6 +232,23 @@ const ContactForm = ({ className }: { className?: string }) => {
                         </Link>
                       </FormLabel>
                     </div>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="name_confirm"
+                render={({ field }) => (
+                  <FormItem className="hidden">
+                    <FormControl>
+                      <Input
+                        {...field}
+                        tabIndex={-1}
+                        autoComplete="off"
+                        className="absolute left-[-9999px]"
+                        aria-hidden="true"
+                      />
+                    </FormControl>
                   </FormItem>
                 )}
               />

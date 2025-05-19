@@ -5,8 +5,16 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-  const { name, email, phone, message } = await req.json();
+  const { name, email, phone, message, name_confirm } = await req.json();
+
+  // 🐝 Honeypot check
+  if (name_confirm && name_confirm.trim() !== "") {
+    console.warn("❌ Spam bot blocked");
+    return NextResponse.json({ error: "Bot detected" }, { status: 400 });
+  }
+
   try {
+    return NextResponse.json({ status: "ok" }, { status: 200 });
     const { data, error } = await resend.emails.send({
       from: "Climasur | mail service <onboarding@resend.dev>",
       to: "santecnicaiberica2021@gmail.com",
