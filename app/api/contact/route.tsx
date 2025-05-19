@@ -14,7 +14,6 @@ export async function POST(req: Request) {
   }
 
   try {
-    return NextResponse.json({ status: "ok" }, { status: 200 });
     const { data, error } = await resend.emails.send({
       from: "Climasur | mail service <onboarding@resend.dev>",
       to: "santecnicaiberica2021@gmail.com",
