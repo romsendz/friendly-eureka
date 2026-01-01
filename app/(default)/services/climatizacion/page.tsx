@@ -1,10 +1,6 @@
 import { Metadata } from "next";
 import Service from "@/components/service";
 
-export const metadata: Metadata = {
-  title: "Climatización | Climasur",
-};
-
 export default function Page() {
   return (
     <>
@@ -129,3 +125,7 @@ export default function Page() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Climatización | Climasur",
+};
